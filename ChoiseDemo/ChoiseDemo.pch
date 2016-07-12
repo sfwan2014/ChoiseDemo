@@ -1,0 +1,21 @@
+//
+//  ChoiseDemo.pch
+//  ChoiseDemo
+//
+//  Created by DBC on 16/7/12.
+//  Copyright © 2016年 DBC. All rights reserved.
+//
+
+#ifndef ChoiseDemo_pch
+#define ChoiseDemo_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import "UIColor+String.h"
+
+// 获取设备屏幕的物理尺寸
+#define kScreenHeight [UIScreen mainScreen].bounds.size.height
+#define kScreenWidth [UIScreen mainScreen].bounds.size.width
+
+#endif /* ChoiseDemo_pch */

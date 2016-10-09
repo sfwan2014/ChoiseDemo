@@ -21,8 +21,16 @@ typedef enum : NSUInteger {
 
 @optional
 -(CGSize)masterChoiseLayout:(MasterChoiseLayout *)layout headerViewSizeForSection:(NSInteger)section;
+-(CGSize)masterChoiseLayout:(MasterChoiseLayout *)layout footerViewSizeForSection:(NSInteger)section;
 
 //-(LayoutSectionType)masterChoiseLayout:(MasterChoiseLayout *)layout sectionTypeForSection:(NSInteger)section;
+- (NSInteger)masterChoiseLayout:(MasterChoiseLayout *)layout numberOfItemsInSection:(NSInteger)section;// 用于计算高度
+// 垂直距离
+- (CGFloat)masterChoiseLayout:(MasterChoiseLayout*)layout minimumLineSpacingForSectionAtIndex:(NSInteger)section;
+// 左右间距
+- (CGFloat)masterChoiseLayout:(MasterChoiseLayout*)layout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section;
+
+- (UIEdgeInsets)masterChoiseLayout:(MasterChoiseLayout*)layout insetForSectionAtIndex:(NSInteger)section;
 
 @end
 
@@ -35,4 +43,5 @@ typedef enum : NSUInteger {
 @property (nonatomic, assign) UIEdgeInsets contentInset;
 
 @property (nonatomic, assign) id<MasterChoiseLayoutDelegate>delegate;
+- (CGSize)caculateContentSize;
 @end
